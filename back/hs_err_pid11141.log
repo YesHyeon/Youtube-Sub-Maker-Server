@@ -1,0 +1,846 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000001031ebbc0, pid=11141, tid=0x0000000000003f03
+#
+# JRE version: OpenJDK Runtime Environment (Zulu 8.62.0.19-CA-macos-aarch64) (8.0_332-b09) (build 1.8.0_332-b09)
+# Java VM: OpenJDK 64-Bit Server VM (25.332-b09 mixed mode bsd-aarch64 compressed oops)
+# Problematic frame:
+# C  [Python+0x1e7bc0]  gc_collect_main+0xb8
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://www.azul.com/support/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000010cf74000):  JavaThread "Python Reference Queue" daemon [_thread_in_native, id=16131, stack(0x00000002a9c74000,0x00000002a9e77000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 2 (SEGV_ACCERR), si_addr: 0x000000016b61d4d8
+
+Registers:
+ x0=0x0000000103484000  x1=0x0000000103484018  x2=0x00000002a9e76878  x3=0x00000002a9e76870
+ x4=0x0000000000000000  x5=0x0000000000000000  x6=0x0000000000000001  x7=0x00000000004c4b40
+ x8=0x000000016b61d4d0  x9=0x0000000000000006 x10=0x0000000000000004 x11=0x00000002b95980f0
+x12=0x00000002b95980f0 x13=0x00000001033f3e30 x14=0x0000000103391780 x15=0x0000006500000000
+x16=0xffffffffffffffe1 x17=0x000000006c626174 x18=0x0000000000000000 x19=0x0000000102aac030
+x20=0x0000000000000000 x21=0x0000000103483d48 x22=0x0000000000000000 x23=0x0000000000000002
+x24=0x0000000103484018 x25=0x0000000103484018 x26=0x00000001679fab08 x27=0x0000000000000000
+x28=0x0000000000000002  fp=0x00000002a9e76860  lr=0x00000001031ec360  sp=0x00000002a9e76760
+pc=0x00000001031ebbc0 cpsr=0x0000000080001000
+Top of Stack: (sp=0x00000002a9e76760)
+0x00000002a9e76760:   00000002a9e767c0 0000000000000002
+0x00000002a9e76770:   00000002b57ad2b0 00000002bb233980
+0x00000002a9e76780:   0000000000000000 0000000000000000
+0x00000002a9e76790:   0000000000000000 00000002a9e76878
+0x00000002a9e767a0:   00000002a9e76870 000000010be1f1f0
+0x00000002a9e767b0:   00000002b5a20170 0000000103483d48
+0x00000002a9e767c0:   0000000103483d48 00000001033489c5
+0x00000002a9e767d0:   0000000000000001 00000002b962cdb0
+0x00000002a9e767e0:   00000002a9e76810 00000001030b9a68
+0x00000002a9e767f0:   00000002b5a20170 0000000103475000
+0x00000002a9e76800:   9a1d44be3f3e0034 00000002bb233980
+0x00000002a9e76810:   000000010cf74000 0000000000000000
+0x00000002a9e76820:   00000001679fab08 0000000000000000
+0x00000002a9e76830:   0000000000000000 0000000103483d48
+0x00000002a9e76840:   0000000000000000 0000000000000000
+0x00000002a9e76850:   00000002b5a20170 0000000000000002
+0x00000002a9e76860:   00000002a9e768a0 00000001031eb960
+0x00000002a9e76870:   0000000000000000 0000000164f73bd0
+0x00000002a9e76880:   0000000000000000 0000000000000000
+0x00000002a9e76890:   00000002b5a20170 000000029ffd8e30
+0x00000002a9e768a0:   00000002a9e768f0 00000001031ecefc
+0x00000002a9e768b0:   00000001679fab08 00000002a9e76e30
+0x00000002a9e768c0:   00000002a9e76998 000000029ffda240
+0x00000002a9e768d0:   0000000000000000 0000000164f73bd0
+0x00000002a9e768e0:   00000002a9e76940 000000029ffd8e30
+0x00000002a9e768f0:   00000002a9e76920 000000010b3b4c44
+0x00000002a9e76900:   00000002a9e769e0 0000000000000001
+0x00000002a9e76910:   00000002a9e76940 000000029ffd8e30
+0x00000002a9e76920:   00000002a9e76930 000000010b3c1264
+0x00000002a9e76930:   00000002a9e76980 000000029ffdd3ec
+0x00000002a9e76940:   00000002a9e76940 0000000000000000
+0x00000002a9e76950:   00000002a9e76998 00000001679fab08 
+
+Instructions: (pc=0x00000001031ebbc0)
+0x00000001031ebba0:   9b285668 910a8108 71000b9f 9a99b118
+0x00000001031ebbb0:   f9400333 eb13033f 540002a0 aa1303e8
+0x00000001031ebbc0:   a940a50a 9240014a b37ef52a b27f0149
+0x00000001031ebbd0:   f9000509 f9400108 eb08033f 54ffff21 
+
+Register to memory mapping:
+
+ x0=0x0000000103484000: _PyRuntime+0xe928 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+ x1=0x0000000103484018: _PyRuntime+0xe940 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+ x2=0x00000002a9e76878 is pointing into the stack for thread: 0x000000010cf74000
+ x3=0x00000002a9e76870 is pointing into the stack for thread: 0x000000010cf74000
+ x4=0x0000000000000000 is an unknown value
+ x5=0x0000000000000000 is an unknown value
+ x6=0x0000000000000001 is an unknown value
+ x7=0x00000000004c4b40 is an unknown value
+ x8=0x000000016b61d4d0 is pointing into the stack for thread: 0x00000002aa13f000
+ x9=0x0000000000000006 is an unknown value
+x10=0x0000000000000004 is an unknown value
+x11=0x00000002b95980f0 is an unknown value
+x12=0x00000002b95980f0 is an unknown value
+x13=0x00000001033f3e30: PyTuple_Type+0 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+x14=0x0000000103391780: usedpools+0 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+x15=0x0000006500000000 is an unknown value
+x16=0xffffffffffffffe1 is an unknown value
+x17=0x000000006c626174 is an unknown value
+x18=0x0000000000000000 is an unknown value
+x19=0x0000000102aac030 is an unknown value
+x20=0x0000000000000000 is an unknown value
+x21=0x0000000103483d48: _PyRuntime+0xe670 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+x22=0x0000000000000000 is an unknown value
+x23=0x0000000000000002 is an unknown value
+x24=0x0000000103484018: _PyRuntime+0xe940 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+x25=0x0000000103484018: _PyRuntime+0xe940 in /opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python at 0x0000000103004000
+x26=0x00000001679fab08 is pointing into metadata
+x27=0x0000000000000000 is an unknown value
+x28=0x0000000000000002 is an unknown value
+
+
+Stack: [0x00000002a9c74000,0x00000002a9e77000],  sp=0x00000002a9e76760,  free space=2057k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [Python+0x1e7bc0]  gc_collect_main+0xb8
+C  [Python+0x1e7960]  gc_collect_with_callback+0x50
+C  [Python+0x1e8efc]  PyGC_Collect+0x58
+C  [_jpype.cpython-311-darwin.so+0x1cc44]  _ZN19JPGarbageCollection9triggeredEv+0x38
+C  [_jpype.cpython-311-darwin.so+0x29264]  Java_org_jpype_ref_JPypeReferenceNative_wake+0x1c
+j  org.jpype.ref.JPypeReferenceNative.wake()V+0
+j  org.jpype.ref.JPypeReferenceQueue$Worker.run()V+42
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x289730]
+V  [libjvm.dylib+0x2881bc]
+V  [libjvm.dylib+0x288410]
+V  [libjvm.dylib+0x311290]
+V  [libjvm.dylib+0x523e08]
+V  [libjvm.dylib+0x523ca4]
+V  [libjvm.dylib+0x45626c]
+C  [libsystem_pthread.dylib+0x726c]  _pthread_start+0x94
+C  [libsystem_pthread.dylib+0x208c]  thread_start+0x8
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.jpype.ref.JPypeReferenceNative.wake()V+0
+j  org.jpype.ref.JPypeReferenceQueue$Worker.run()V+42
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000002aa13f000 JavaThread "Thread-5" daemon [_thread_in_native, id=259, stack(0x000000016b618000,0x000000016d618000)]
+  0x00000002ab48b000 JavaThread "Thread-4" daemon [_thread_in_native, id=3887, stack(0x000000016e628000,0x000000016f62b000)]
+  0x000000016a3fa000 JavaThread "Thread-3" daemon [_thread_in_native, id=3875, stack(0x000000016e628000,0x000000016f62b000)]
+  0x0000000158640800 JavaThread "Thread-2" daemon [_thread_in_native, id=3867, stack(0x000000016e628000,0x000000016f62b000)]
+  0x000000016ab71800 JavaThread "Thread-1" daemon [_thread_in_native, id=3859, stack(0x000000016e628000,0x000000016f62b000)]
+=>0x000000010cf74000 JavaThread "Python Reference Queue" daemon [_thread_in_native, id=16131, stack(0x00000002a9c74000,0x00000002a9e77000)]
+  0x000000015853c000 JavaThread "Service Thread" daemon [_thread_blocked, id=17155, stack(0x00000002a985c000,0x00000002a9a5f000)]
+  0x0000000104697000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=14851, stack(0x00000002a9650000,0x00000002a9853000)]
+  0x00000001584f6800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=14339, stack(0x00000002a9444000,0x00000002a9647000)]
+  0x00000001584f5800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=13827, stack(0x00000002a9238000,0x00000002a943b000)]
+  0x00000001584f3800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=13571, stack(0x00000002a902c000,0x00000002a922f000)]
+  0x0000000104696000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13315, stack(0x00000002a8e20000,0x00000002a9023000)]
+  0x00000001584cb000 JavaThread "Finalizer" daemon [_thread_blocked, id=12803, stack(0x00000002a8c14000,0x00000002a8e17000)]
+  0x000000011d4d3000 JavaThread "Reference Handler" daemon [_thread_blocked, id=18435, stack(0x00000002a8a08000,0x00000002a8c0b000)]
+  0x000000011c9aa800 JavaThread "main" [_thread_in_native, id=3851, stack(0x000000016e628000,0x000000016f62b000)]
+
+Other Threads:
+  0x00000001584bd000 VMThread [stack: 0x00000002a87fc000,0x00000002a89ff000] [id=18691]
+  0x0000000158544800 WatcherThread [stack: 0x00000002a9a68000,0x00000002a9c6b000] [id=16643]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000780000000, size: 1024 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0
+Compressed class space size: 1073741824 Address: 0x0000000800000000
+
+Heap:
+ PSYoungGen      total 271360K, used 130K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab20a58,0x00000007baf00000)
+  from space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bce90,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+
+Card table byte_map: [0x0000000163e04000,0x0000000164008000] byte_map_base: 0x0000000160204000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000164f6dc38
+ Begin Bits: [0x00000001655e8000, 0x00000001665e8000)
+ End Bits:   [0x00000001665e8000, 0x00000001675e8000)
+
+Polling page: 0x0000000103000000
+
+CodeCache: size=131072Kb used=7719Kb max_used=7740Kb free=123352Kb
+ bounds [0x000000029ffc8000, 0x00000002a07a8000, 0x00000002a7fc8000]
+ total_blobs=2885 nmethods=2530 adapters=271
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1304.713 Thread 0x00000001584f6800 3261       4       org.openkoreantext.processor.tokenizer.KoreanTokenizer$::$anonfun$findTopCandidates$8 (350 bytes)
+Event: 1305.112 Thread 0x00000001584f6800 nmethod 3261 0x00000002a04a53d0 code [0x00000002a04a5ac0, 0x00000002a04a9740]
+Event: 1311.855 Thread 0x0000000104697000 3262       3       java.util.regex.Pattern$Curly::study (153 bytes)
+Event: 1311.860 Thread 0x0000000104697000 nmethod 3262 0x00000002a00dac90 code [0x00000002a00dae40, 0x00000002a00db3c8]
+Event: 1311.861 Thread 0x00000001584f5800 3263       4       java.lang.Character::<init> (10 bytes)
+Event: 1311.861 Thread 0x00000001584f5800 nmethod 3263 0x00000002a041fc10 code [0x00000002a041fd40, 0x00000002a041fd90]
+Event: 1320.683 Thread 0x00000001584f6800 3264       4       scala.LowPriorityImplicits$$anon$4::apply (9 bytes)
+Event: 1320.738 Thread 0x00000001584f6800 nmethod 3264 0x00000002a06a4490 code [0x00000002a06a4600, 0x00000002a06a4810]
+Event: 1323.770 Thread 0x00000001584f3800 3265       4       org.openkoreantext.processor.stemmer.KoreanStemmer$$$Lambda$101/135184888::apply (16 bytes)
+Event: 1323.773 Thread 0x00000001584f3800 nmethod 3265 0x00000002a04037d0 code [0x00000002a0403940, 0x00000002a0403a68]
+
+GC Heap History (10 events):
+Event: 1323.802 GC heap before
+{Heap before GC invocations=298 (full 147):
+ PSYoungGen      total 271360K, used 64K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 1% used [0x00000007baf00000,0x00000007baf10000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71410K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bc8f0,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+Event: 1323.899 GC heap after
+Heap after GC invocations=298 (full 147):
+ PSYoungGen      total 271360K, used 0K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bcca8,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+}
+Event: 1324.012 GC heap before
+{Heap before GC invocations=299 (full 147):
+ PSYoungGen      total 271360K, used 130K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab20a58,0x00000007baf00000)
+  from space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bcca8,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+Event: 1324.013 GC heap after
+Heap after GC invocations=299 (full 147):
+ PSYoungGen      total 271360K, used 64K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 1% used [0x00000007bb400000,0x00000007bb410000,0x00000007bb900000)
+  to   space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bcca8,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+}
+Event: 1324.013 GC heap before
+{Heap before GC invocations=300 (full 148):
+ PSYoungGen      total 271360K, used 64K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 1% used [0x00000007bb400000,0x00000007bb410000,0x00000007bb900000)
+  to   space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bcca8,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+Event: 1324.062 GC heap after
+Heap after GC invocations=300 (full 148):
+ PSYoungGen      total 271360K, used 0K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+  to   space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bccf0,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+}
+Event: 1324.368 GC heap before
+{Heap before GC invocations=301 (full 148):
+ PSYoungGen      total 271360K, used 5455K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 2% used [0x00000007aab00000,0x00000007ab053f00,0x00000007baf00000)
+  from space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+  to   space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bccf0,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+Event: 1324.369 GC heap after
+Heap after GC invocations=301 (full 148):
+ PSYoungGen      total 271360K, used 128K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 2% used [0x00000007baf00000,0x00000007baf20000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bccf0,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+}
+Event: 1324.369 GC heap before
+{Heap before GC invocations=302 (full 149):
+ PSYoungGen      total 271360K, used 128K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 2% used [0x00000007baf00000,0x00000007baf20000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bccf0,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+Event: 1324.422 GC heap after
+Heap after GC invocations=302 (full 149):
+ PSYoungGen      total 271360K, used 0K [0x00000007aab00000, 0x00000007bb900000, 0x00000007c0000000)
+  eden space 266240K, 0% used [0x00000007aab00000,0x00000007aab00000,0x00000007baf00000)
+  from space 5120K, 0% used [0x00000007baf00000,0x00000007baf00000,0x00000007bb400000)
+  to   space 5120K, 0% used [0x00000007bb400000,0x00000007bb400000,0x00000007bb900000)
+ ParOldGen       total 87552K, used 71411K [0x0000000780000000, 0x0000000785580000, 0x00000007aab00000)
+  object space 87552K, 81% used [0x0000000780000000,0x00000007845bce90,0x0000000785580000)
+ Metaspace       used 13867K, capacity 14490K, committed 14848K, reserved 1062912K
+  class space    used 2050K, capacity 2176K, committed 2304K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 68.217 Thread 0x000000016ab71800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a04adcb8 method=scala.collection.TraversableOnce.$anonfun$foldLeft$1(Lscala/Function2;Lscala/runtime/ObjectRef;Ljava/lang/Object;)V @ 7
+Event: 68.217 Thread 0x000000016ab71800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a04adcb8 method=scala.collection.TraversableOnce.$anonfun$foldLeft$1(Lscala/Function2;Lscala/runtime/ObjectRef;Ljava/lang/Object;)V @ 7
+Event: 68.217 Thread 0x000000016ab71800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a04adcb8 method=scala.collection.TraversableOnce.$anonfun$foldLeft$1(Lscala/Function2;Lscala/runtime/ObjectRef;Ljava/lang/Object;)V @ 7
+Event: 68.217 Thread 0x000000016ab71800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a04adcb8 method=scala.collection.TraversableOnce.$anonfun$foldLeft$1(Lscala/Function2;Lscala/runtime/ObjectRef;Ljava/lang/Object;)V @ 7
+Event: 1282.041 Thread 0x00000002ab48b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000002a0408680 method=java.util.regex.Pattern$Ctype.isSatisfiedBy(I)Z @ 15
+Event: 1282.055 Thread 0x00000002ab48b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000002a0619970 method=java.util.regex.Pattern$BmpCharProperty.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 5
+Event: 1283.723 Thread 0x00000002ab48b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000002a04c772c method=org.openkoreantext.processor.util.KoreanSubstantive$.isKoreanNameVariation(Ljava/lang/CharSequence;)Z @ 116
+Event: 1287.758 Thread 0x00000002ab48b000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a0528b98 method=scala.collection.immutable.HashMap$HashTrieMap.get0(Ljava/lang/Object;II)Lscala/Option; @ 75
+Event: 1293.172 Thread 0x00000002ab48b000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a0528b08 method=scala.collection.immutable.HashMap$HashTrieMap.get0(Ljava/lang/Object;II)Lscala/Option; @ 75
+Event: 1318.196 Thread 0x00000002ab48b000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00000002a0528b98 method=scala.collection.immutable.HashMap$HashTrieMap.get0(Ljava/lang/Object;II)Lscala/Option; @ 75
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2.953 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$count$1$adapted(Lscala/Function1;Lscala/runtime/IntRef;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000007acae5138) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/z
+Event: 2.964 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$sliding$1(Lscala/collection/IterableLike;Lscala/collection/Seq;)Ljava/lang/Object;> (0x00000007acb4b908) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/zulu-src.gi
+Event: 2.967 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$sum$1(Lscala/math/Numeric;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000007acb98930) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/zulu-src.git
+Event: 3.036 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$releaseVersion$1$adapted(Ljava/lang/String;)Ljava/lang/Object;> (0x00000007aaf95030) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/zulu-src.git/hotspot/src/share/
+Event: 3.037 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$releaseVersion$2(Ljava/lang/String;)Ljava/lang/String;> (0x00000007aafa02d8) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/zulu-src.git/hotspot/src/share/vm/inter
+Event: 3.037 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$developmentVersion$1$adapted(Ljava/lang/String;)Ljava/lang/Object;> (0x00000007aafa4470) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/zulu-src.git/hotspot/src/sh
+Event: 3.037 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$developmentVersion$2(Lscala/util/PropertiesTrait;Ljava/lang/String;)Lscala/Option;> (0x00000007aafa8238) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos-aarch64/zulu-src.gi
+Event: 3.043 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$distinct$1(Lscala/collection/mutable/Builder;Lscala/collection/mutable/HashSet;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000007ab00c890) thrown at [/Users/tester/jenkins/workspace/zul
+Event: 3.079 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$filterImpl$1(Lscala/Function1;ZLscala/collection/mutable/Builder;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000007ab1f13b0) thrown at [/Users/tester/jenkins/workspace/zulu8-build-macos
+Event: 6.019 Thread 0x000000011c9aa800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.$anonfun$addString$1(Lscala/collection/mutable/StringBuilder;Ljava/lang/String;Lscala/runtime/BooleanRef;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000007aaba9690) thrown at [/Users/tester/jenk
+
+Events (10 events):
+Event: 1320.550 Executing VM operation: ParallelGCSystemGC done
+Event: 1320.703 Executing VM operation: ParallelGCSystemGC
+Event: 1320.738 Executing VM operation: ParallelGCSystemGC done
+Event: 1323.796 Executing VM operation: ParallelGCSystemGC
+Event: 1323.899 Executing VM operation: ParallelGCSystemGC done
+Event: 1324.012 Executing VM operation: ParallelGCSystemGC
+Event: 1324.062 Executing VM operation: ParallelGCSystemGC done
+Event: 1324.365 Thread 0x00000002aa13f000 Thread added: 0x00000002aa13f000
+Event: 1324.367 Executing VM operation: ParallelGCSystemGC
+Event: 1324.422 Executing VM operation: ParallelGCSystemGC done
+
+
+Dynamic libraries:
+0x0000000103004000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/Python
+0x00000001986da000 	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+0x0000000198511000 	/usr/lib/libobjc.A.dylib
+0x00000001a31a7000 	/usr/lib/liboah.dylib
+0x00000001a31d9000 	/usr/lib/libfakelink.dylib
+0x000000019ab0a000 	/usr/lib/libicucore.A.dylib
+0x00000001a31d7000 	/usr/lib/libSystem.B.dylib
+0x00000001a31dd000 	/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking
+0x000000019863b000 	/usr/lib/libc++abi.dylib
+0x00000001985d4000 	/usr/lib/libc++.1.dylib
+0x00000001a31d1000 	/usr/lib/system/libcache.dylib
+0x00000001a318f000 	/usr/lib/system/libcommonCrypto.dylib
+0x00000001a31b8000 	/usr/lib/system/libcompiler_rt.dylib
+0x00000001a31af000 	/usr/lib/system/libcopyfile.dylib
+0x0000000198417000 	/usr/lib/system/libcorecrypto.dylib
+0x00000001984ca000 	/usr/lib/system/libdispatch.dylib
+0x0000000198698000 	/usr/lib/system/libdyld.dylib
+0x00000001a31c7000 	/usr/lib/system/libkeymgr.dylib
+0x00000001a316a000 	/usr/lib/system/libmacho.dylib
+0x00000001a285f000 	/usr/lib/system/libquarantine.dylib
+0x00000001a31c4000 	/usr/lib/system/libremovefile.dylib
+0x000000019d800000 	/usr/lib/system/libsystem_asl.dylib
+0x00000001983b9000 	/usr/lib/system/libsystem_blocks.dylib
+0x0000000198552000 	/usr/lib/system/libsystem_c.dylib
+0x00000001a31bc000 	/usr/lib/system/libsystem_collections.dylib
+0x00000001a1ced000 	/usr/lib/system/libsystem_configuration.dylib
+0x00000001a0f49000 	/usr/lib/system/libsystem_containermanager.dylib
+0x00000001a2ecc000 	/usr/lib/system/libsystem_coreservices.dylib
+0x000000019adc0000 	/usr/lib/system/libsystem_darwin.dylib
+0x00000001a31c8000 	/usr/lib/system/libsystem_dnssd.dylib
+0x000000019854f000 	/usr/lib/system/libsystem_featureflags.dylib
+0x00000001986ad000 	/usr/lib/system/libsystem_info.dylib
+0x00000001a3132000 	/usr/lib/system/libsystem_m.dylib
+0x000000019849f000 	/usr/lib/system/libsystem_malloc.dylib
+0x000000019d78f000 	/usr/lib/system/libsystem_networkextension.dylib
+0x000000019b219000 	/usr/lib/system/libsystem_notify.dylib
+0x00000001a9515000 	/usr/lib/system/libsystem_product_info_filter.dylib
+0x00000001a1cf2000 	/usr/lib/system/libsystem_sandbox.dylib
+0x00000001a31c1000 	/usr/lib/system/libsystem_secinit.dylib
+0x0000000198653000 	/usr/lib/system/libsystem_kernel.dylib
+0x00000001986a5000 	/usr/lib/system/libsystem_platform.dylib
+0x000000019868b000 	/usr/lib/system/libsystem_pthread.dylib
+0x000000019ef58000 	/usr/lib/system/libsystem_symptoms.dylib
+0x00000001983fd000 	/usr/lib/system/libsystem_trace.dylib
+0x00000001a319c000 	/usr/lib/system/libunwind.dylib
+0x00000001983bb000 	/usr/lib/system/libxpc.dylib
+0x00000001dde28000 	/System/Library/CoreServices/Encodings/libKoreanConverter.dylib
+0x00000001036bc000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/unicodedata.cpython-311-darwin.so
+0x0000000102964000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_json.cpython-311-darwin.so
+0x0000000102978000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_typing.cpython-311-darwin.so
+0x0000000102988000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_contextvars.cpython-311-darwin.so
+0x00000001029b0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/math.cpython-311-darwin.so
+0x0000000102998000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/select.cpython-311-darwin.so
+0x0000000102bac000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_socket.cpython-311-darwin.so
+0x00000001029c8000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/array.cpython-311-darwin.so
+0x00000001037d8000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_datetime.cpython-311-darwin.so
+0x00000001029dc000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_bisect.cpython-311-darwin.so
+0x0000000102bc8000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_random.cpython-311-darwin.so
+0x0000000102bd8000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_sha512.cpython-311-darwin.so
+0x0000000102be8000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_struct.cpython-311-darwin.so
+0x00000001036a0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/binascii.cpython-311-darwin.so
+0x00000001a3120000 	/usr/lib/libz.1.dylib
+0x0000000104a34000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_ssl.cpython-311-darwin.so
+0x0000000104ae4000 	/opt/homebrew/Cellar/openssl@1.1/1.1.1u/lib/libssl.1.1.dylib
+0x0000000104d78000 	/opt/homebrew/Cellar/openssl@1.1/1.1.1u/lib/libcrypto.1.1.dylib
+0x0000000104a00000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/zlib.cpython-311-darwin.so
+0x0000000104a14000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_bz2.cpython-311-darwin.so
+0x00000001a2ebf000 	/usr/lib/libbz2.1.0.dylib
+0x0000000104a80000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_lzma.cpython-311-darwin.so
+0x0000000104b60000 	/opt/homebrew/Cellar/xz/5.4.3/lib/liblzma.5.dylib
+0x0000000102950000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/markupsafe/_speedups.cpython-311-darwin.so
+0x0000000104a98000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_hashlib.cpython-311-darwin.so
+0x0000000104ab0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_blake2.cpython-311-darwin.so
+0x0000000104a68000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_scproxy.cpython-311-darwin.so
+0x00000001992c9000 	/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+0x00000001a1cf9000 	/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo
+0x000000019b142000 	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+0x000000019a78d000 	/System/Library/Frameworks/Security.framework/Versions/A/Security
+0x00000001a288a000 	/usr/lib/libbsm.0.dylib
+0x000000019c84c000 	/usr/lib/libnetwork.dylib
+0x000000019d7a9000 	/usr/lib/libMobileGestalt.dylib
+0x000000019f13b000 	/usr/lib/libDiagnosticMessagesClient.dylib
+0x000000019d7a7000 	/usr/lib/libenergytrace.dylib
+0x00000001a3173000 	/usr/lib/system/libkxld.dylib
+0x00000001995d5000 	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+0x00000001a249d000 	/System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer
+0x000000019fbe3000 	/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout
+0x00000001a3476000 	/usr/lib/libcompression.dylib
+0x000000019d2db000 	/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+0x000000019f230000 	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+0x00000001a331f000 	/usr/lib/libarchive.2.dylib
+0x000000019fc2e000 	/usr/lib/libxml2.2.dylib
+0x00000001a963e000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+0x00000001a1cfd000 	/usr/lib/liblangid.dylib
+0x00000001a3a63000 	/usr/lib/liblzma.5.dylib
+0x00000001a3444000 	/usr/lib/libapple_nghttp2.dylib
+0x000000019eb6f000 	/usr/lib/libsqlite3.dylib
+0x0000000217473000 	/usr/lib/libCoreEntitlements.dylib
+0x00000001a2eae000 	/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression
+0x00000001a2872000 	/usr/lib/libcoretls.dylib
+0x00000001a3a7c000 	/usr/lib/libcoretls_cfhelpers.dylib
+0x00000001a3471000 	/usr/lib/libpam.2.dylib
+0x00000001a3ae5000 	/usr/lib/libxar.1.dylib
+0x00000001a31de000 	/usr/lib/libpcap.A.dylib
+0x000000019ef4f000 	/usr/lib/libdns_services.dylib
+0x00000001a321b000 	/usr/lib/libiconv.2.dylib
+0x00000001a3169000 	/usr/lib/libcharset.1.dylib
+0x000000019fbac000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents
+0x000000019adcb000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+0x000000019f190000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+0x00000001a2ed2000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+0x00000001a33a5000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+0x000000019eede000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+0x0000000198c20000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+0x00000001a3a0c000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+0x000000019fbb9000 	/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList
+0x00000001a2862000 	/usr/lib/libCheckFix.dylib
+0x000000019d818000 	/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC
+0x00000001a1cff000 	/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP
+0x000000019f13e000 	/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities
+0x0000000199382000 	/usr/lib/libmecabra.dylib
+0x00000001a98db000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate
+0x00000001a289b000 	/usr/lib/libmecab.dylib
+0x000000019934e000 	/usr/lib/libCRFSuite.dylib
+0x00000001a28f8000 	/usr/lib/libgermantok.dylib
+0x00000001a341d000 	/usr/lib/libThaiTokenizer.dylib
+0x000000019f238000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+0x00000001a9615000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+0x00000001a3b2a000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
+0x00000001a23a4000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+0x0000000198fa9000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+0x00000001a3547000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+0x00000001a28fb000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib
+0x00000001a345c000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib
+0x00000001a3542000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib
+0x00000001a1df8000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib
+0x0000000199267000 	/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib
+0x000000019f10a000 	/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics
+0x00000001a1df0000 	/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData
+0x000000019921f000 	/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon
+0x00000001a3b22000 	/usr/lib/libChineseTokenizer.dylib
+0x00000001999c6000 	/System/Library/PrivateFrameworks/LanguageModeling.framework/Versions/A/LanguageModeling
+0x00000001a341f000 	/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce
+0x00000001a248a000 	/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji
+0x00000001a330d000 	/usr/lib/libcmph.dylib
+0x000000019fb8c000 	/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory
+0x000000019fb7c000 	/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory
+0x00000001a3a7e000 	/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS
+0x00000001a27b2000 	/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+0x00000001a3af4000 	/usr/lib/libutil.dylib
+0x000000019b104000 	/System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore
+0x000000019fbe0000 	/usr/lib/libapp_launch_measurement.dylib
+0x00000001a3af8000 	/usr/lib/libxslt.1.dylib
+0x00000001a2846000 	/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement
+0x00000001a0f68000 	/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
+0x0000000104ac4000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_opcode.cpython-311-darwin.so
+0x0000000104cc0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_decimal.cpython-311-darwin.so
+0x0000000104d24000 	/opt/homebrew/Cellar/mpdecimal/2.5.1/lib/libmpdec.2.5.1.dylib
+0x0000000104ad4000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_uuid.cpython-311-darwin.so
+0x0000000104c90000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_heapq.cpython-311-darwin.so
+0x0000000104ca0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/fcntl.cpython-311-darwin.so
+0x0000000104cb0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_posixsubprocess.cpython-311-darwin.so
+0x0000000104d58000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_asyncio.cpython-311-darwin.so
+0x0000000105194000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_pickle.cpython-311-darwin.so
+0x0000000104cf0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_queue.cpython-311-darwin.so
+0x0000000104d00000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/charset_normalizer/md.cpython-311-darwin.so
+0x0000000107300000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/charset_normalizer/md__mypyc.cpython-311-darwin.so
+0x00000001051bc000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_multibytecodec.cpython-311-darwin.so
+0x0000000107444000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_elementtree.cpython-311-darwin.so
+0x00000001051d0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/pyexpat.cpython-311-darwin.so
+0x00000001a3e4a000 	/usr/lib/libexpat.1.dylib
+0x00000001074e0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/_mecab.cpython-311-darwin.so
+0x0000000107684000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/mecab/.dylibs/libmecab.2.dylib
+0x0000000107a98000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/core/_multiarray_umath.cpython-311-darwin.so
+0x00000001093e4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/.dylibs/libopenblas64_.0.dylib
+0x0000000107e44000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/.dylibs/libgfortran.5.dylib
+0x0000000107560000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/.dylibs/libquadmath.0.dylib
+0x0000000107488000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/.dylibs/libgcc_s.1.1.dylib
+0x00000001074ac000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/core/_multiarray_tests.cpython-311-darwin.so
+0x00000001075bc000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_ctypes.cpython-311-darwin.so
+0x00000001a68f4000 	/usr/lib/libffi.dylib
+0x0000000107614000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/linalg/_umath_linalg.cpython-311-darwin.so
+0x0000000107460000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/fft/_pocketfft_internal.cpython-311-darwin.so
+0x00000001084b0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/mtrand.cpython-311-darwin.so
+0x0000000107648000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/bit_generator.cpython-311-darwin.so
+0x0000000107a4c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_common.cpython-311-darwin.so
+0x0000000108458000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_bounded_integers.cpython-311-darwin.so
+0x0000000107a0c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_mt19937.cpython-311-darwin.so
+0x00000001075e0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_philox.cpython-311-darwin.so
+0x00000001081cc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_pcg64.cpython-311-darwin.so
+0x00000001051e4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_sfc64.cpython-311-darwin.so
+0x0000000108634000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/numpy/random/_generator.cpython-311-darwin.so
+0x0000000108904000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/interval.cpython-311-darwin.so
+0x0000000108b84000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/hashtable.cpython-311-darwin.so
+0x0000000108564000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/missing.cpython-311-darwin.so
+0x0000000108428000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/dtypes.cpython-311-darwin.so
+0x0000000108594000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/np_datetime.cpython-311-darwin.so
+0x00000001085f4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/conversion.cpython-311-darwin.so
+0x00000001075fc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/base.cpython-311-darwin.so
+0x0000000108a08000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/offsets.cpython-311-darwin.so
+0x0000000108884000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/timestamps.cpython-311-darwin.so
+0x0000000108804000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/nattype.cpython-311-darwin.so
+0x0000000108d04000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/timedeltas.cpython-311-darwin.so
+0x000000010883c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/timezones.cpython-311-darwin.so
+0x0000000107a2c000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_zoneinfo.cpython-311-darwin.so
+0x0000000108b24000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/fields.cpython-311-darwin.so
+0x00000001081ec000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/ccalendar.cpython-311-darwin.so
+0x0000000108e80000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/tzconversion.cpython-311-darwin.so
+0x0000000108400000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/properties.cpython-311-darwin.so
+0x0000000109054000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/parsing.cpython-311-darwin.so
+0x0000000109000000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/strptime.cpython-311-darwin.so
+0x000000010910c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/period.cpython-311-darwin.so
+0x0000000108adc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslibs/vectorized.cpython-311-darwin.so
+0x0000000108414000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/ops_dispatch.cpython-311-darwin.so
+0x000000010a988000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/algos.cpython-311-darwin.so
+0x00000001091fc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/lib.cpython-311-darwin.so
+0x0000000108ec0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/hashing.cpython-311-darwin.so
+0x000000010916c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/tslib.cpython-311-darwin.so
+0x00000001090ac000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/ops.cpython-311-darwin.so
+0x00000001085bc000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_csv.cpython-311-darwin.so
+0x00000001090e0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/arrays.cpython-311-darwin.so
+0x000000010af00000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/sparse.cpython-311-darwin.so
+0x0000000104d10000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/reduction.cpython-311-darwin.so
+0x0000000108b10000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/indexing.cpython-311-darwin.so
+0x000000010b0ac000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/index.cpython-311-darwin.so
+0x000000010938c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/internals.cpython-311-darwin.so
+0x000000010b444000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/join.cpython-311-darwin.so
+0x000000010ad38000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/writers.cpython-311-darwin.so
+0x00000001085d0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/mmap.cpython-311-darwin.so
+0x00000001085e0000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/grp.cpython-311-darwin.so
+0x000000010ad68000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/window/aggregations.cpython-311-darwin.so
+0x00000001091d0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/window/indexers.cpython-311-darwin.so
+0x000000010b360000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/reshape.cpython-311-darwin.so
+0x000000010bb9c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/groupby.cpython-311-darwin.so
+0x000000010adb4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/testing.cpython-311-darwin.so
+0x0000000108eec000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/cmath.cpython-311-darwin.so
+0x000000010b82c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/parsers.cpython-311-darwin.so
+0x000000010add0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/pandas/_libs/json.cpython-311-darwin.so
+0x000000010b398000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/_jpype.cpython-311-darwin.so
+0x000000010b8a0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/platform/_pywrap_cpu_feature_guard.so
+0x000000014a210000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/libtensorflow_framework.2.dylib
+0x000000010f000000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+0x0000000280000000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/libtensorflow_cc.2.dylib
+0x000000010c404000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/tsl/python/lib/core/libbfloat16.so.so
+0x0000000108874000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/termios.cpython-311-darwin.so
+0x000000010c13c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/google/_upb/_message.abi3.so
+0x000000010fa04000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_tfe.so
+0x000000010fd40000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/platform/_pywrap_tf2.so
+0x0000000148000000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/client/_pywrap_tf_session.so
+0x000000010fb84000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_tf_stack.so
+0x000000010bb00000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_py_exception_registry.so
+0x000000010c18c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_dtypes.so
+0x000000010b8c8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/lib/core/_pywrap_custom_casts.so
+0x000000010bb30000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/lib/core/_pywrap_float8.so
+0x000000010bb58000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/tsl/python/lib/core/pywrap_bfloat16.so
+0x00000001091a8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/wrapt/_wrappers.cpython-311-darwin.so
+0x000000010c734000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_nest.so
+0x000000011c0e0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_utils.so
+0x000000010c75c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/fast_tensor_util.so
+0x000000011c400000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/profiler/internal/_pywrap_traceme.so
+0x000000011fa90000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_op_def_registry.so
+0x000000011fdb8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/flags_pybind.so
+0x00000001488a4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_op_def_library_pybind.so
+0x000000011fc20000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_pywrap_python_api_dispatcher.so
+0x00000001495ac000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/data/experimental/service/_pywrap_server_lib.so
+0x000000014c438000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/data/experimental/service/_pywrap_utils.so
+0x000000010c780000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_determinism.so
+0x000000010c7a8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_tensor_float_32_execution.so
+0x000000014cb84000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_proto_comparators.so
+0x000000014cd4c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/lib/io/_pywrap_file_io.so
+0x000000014d0a8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/lib/io/_pywrap_record_io.so
+0x000000014d424000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/saved_model/pywrap_saved_model.so
+0x000000014d5fc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_checkpoint_reader.so
+0x000000014d7b4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_parallel_device.so
+0x000000010c7d0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/lib/core/_pywrap_py_func.so
+0x000000014e09c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/client/_pywrap_events_writer.so
+0x000000014e99c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/profiler/internal/_pywrap_profiler.so
+0x0000000108b6c000 	/opt/homebrew/Cellar/python@3.11/3.11.3/Frameworks/Python.framework/Versions/3.11/lib/python3.11/lib-dynload/_multiprocessing.cpython-311-darwin.so
+0x000000014f690000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/client/_pywrap_device_lib.so
+0x0000000158800000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/compiler/tf2tensorrt/_pywrap_py_utils.so
+0x00000001589e4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/grappler/_pywrap_tf_optimizer.so
+0x0000000158b7c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/grappler/_pywrap_tf_cluster.so
+0x000000010c1e4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/_errors.cpython-311-darwin.so
+0x00000001590cc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/.dylibs/libhdf5.200.dylib
+0x000000010f9b0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/.dylibs/libhdf5_hl.200.dylib
+0x000000010f984000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/.dylibs/libz.1.2.12.dylib
+0x000000010f9dc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5.cpython-311-darwin.so
+0x000000011c000000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/defs.cpython-311-darwin.so
+0x000000010fcc0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/_objects.cpython-311-darwin.so
+0x000000011c068000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/_conv.cpython-311-darwin.so
+0x000000010fc90000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5r.cpython-311-darwin.so
+0x000000011fd18000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5t.cpython-311-darwin.so
+0x000000011ff50000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5p.cpython-311-darwin.so
+0x000000010fcf0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5s.cpython-311-darwin.so
+0x000000010c70c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/utils.cpython-311-darwin.so
+0x000000010fd14000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5ac.cpython-311-darwin.so
+0x000000011c0a0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5z.cpython-311-darwin.so
+0x000000011c5cc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5a.cpython-311-darwin.so
+0x000000010bb80000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/_proxy.cpython-311-darwin.so
+0x000000011fa00000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5d.cpython-311-darwin.so
+0x000000011c1c0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5ds.cpython-311-darwin.so
+0x000000011fa58000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5f.cpython-311-darwin.so
+0x00000001487d0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5g.cpython-311-darwin.so
+0x000000011c0bc000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5i.cpython-311-darwin.so
+0x0000000148804000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5fd.cpython-311-darwin.so
+0x000000011c1e0000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5pl.cpython-311-darwin.so
+0x000000011fd88000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5o.cpython-311-darwin.so
+0x000000011ffb8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/h5l.cpython-311-darwin.so
+0x000000014886c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/h5py/_selector.cpython-311-darwin.so
+0x0000000159b94000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_tfprof.so
+0x0000000159eb8000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_quantize_training.so
+0x0000000148838000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_sanitizers.so
+0x000000015a390000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_test_metrics_util.so
+0x0000000148d7c000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/platform/_pywrap_stacktrace_handler.so
+0x000000015a520000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/util/_pywrap_util_port.so
+0x000000015aa98000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/client/_pywrap_debug_events_writer.so
+0x000000015adf4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_mlir.so
+0x0000000149500000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/framework/_pywrap_python_op_gen.so
+0x0000000148da4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_toco_api.so
+0x000000015b320000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/lite/python/metrics/_pywrap_tensorflow_lite_metrics_wrapper.so
+0x0000000149758000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/lite/experimental/microfrontend/python/ops/_audio_microfrontend_op.so
+0x000000015baf4000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/lite/python/interpreter_wrapper/_pywrap_tensorflow_interpreter_wrapper.so
+0x000000015b584000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/lite/python/analyzer_wrapper/_pywrap_analyzer_wrapper.so
+0x000000015c068000 	/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/tensorflow/python/_pywrap_dtensor_device.so
+0x000000011ffdc000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jli/libjli.dylib
+0x00000001af02e000 	/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
+0x000000019b27a000 	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+0x000000019e780000 	/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+0x000000019c132000 	/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation
+0x00000001a920f000 	/System/Library/PrivateFrameworks/RemoteViewServices.framework/Versions/A/RemoteViewServices
+0x00000001a1695000 	/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap
+0x00000001a4f13000 	/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport
+0x00000001a4f9c000 	/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity
+0x00000001a440e000 	/usr/lib/libspindump.dylib
+0x000000019c3a3000 	/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers
+0x00000001a0f86000 	/System/Library/Frameworks/Metal.framework/Versions/A/Metal
+0x00000001a169a000 	/System/Library/PrivateFrameworks/CoreSVG.framework/Versions/A/CoreSVG
+0x000000019d834000 	/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+0x000000019dc09000 	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+0x00000001a3e85000 	/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices
+0x00000001acddc000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+0x00000001a167d000 	/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation
+0x00000001a5dbf000 	/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+0x00000001a4f1f000 	/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore
+0x00000001bb85f000 	/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput
+0x00000001a1349000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+0x000000019f5bc000 	/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+0x00000001a924f000 	/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition
+0x000000019f936000 	/System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI
+0x000000019a06a000 	/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+0x00000001a4818000 	/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport
+0x000000019fb70000 	/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis
+0x00000001f9b47000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+0x00000001a2777000 	/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag
+0x000000019e216000 	/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync
+0x00000001a1919000 	/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage
+0x0000000199e8e000 	/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText
+0x00000001a16ca000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
+0x00000001a4e6f000 	/System/Library/PrivateFrameworks/TextureIO.framework/Versions/A/TextureIO
+0x00000001a3b9e000 	/usr/lib/libate.dylib
+0x00000001a4d90000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib
+0x00000001a4d99000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib
+0x00000001a4cec000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib
+0x00000001a4d0e000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+0x00000001a4df4000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+0x00000001a4728000 	/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+0x00000001a46e3000 	/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG
+0x00000001a1205000 	/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib
+0x000000019ee83000 	/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices
+0x00000001af701000 	/System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator
+0x00000001a4814000 	/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient
+0x0000000199aca000 	/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay
+0x00000001a10ef000 	/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+0x00000001a0f7c000 	/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator
+0x000000019fd1c000 	/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+0x00000001a346f000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders
+0x00000001a4853000 	/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+0x000000019edc7000 	/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard
+0x000000019eb55000 	/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer
+0x00000001a4d8b000 	/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler
+0x00000001a4d6b000 	/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment
+0x00000001a4d93000 	/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay
+0x00000001f9b3a000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib
+0x0000000203ff9000 	/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/31001/Libraries/libGPUCompilerUtils.dylib
+0x00000001a4df9000 	/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore
+0x00000001a43fb000 	/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport
+0x00000001a667c000 	/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata
+0x0000000199bea000 	/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore
+0x00000001a10c8000 	/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk
+0x00000001a5f71000 	/usr/lib/libAudioStatistics.dylib
+0x00000001b7ec6000 	/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy
+0x00000001a61dd000 	/usr/lib/libSMC.dylib
+0x00000001aef10000 	/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI
+0x00000001a4cba000 	/usr/lib/libAudioToolboxUtility.dylib
+0x00000001b3f93000 	/System/Library/PrivateFrameworks/OSAServicesClient.framework/Versions/A/OSAServicesClient
+0x00000001a6689000 	/usr/lib/libperfcheck.dylib
+0x00000001b89de000 	/usr/lib/libmis.dylib
+0x00000001f9b9c000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+0x00000001f9b5b000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib
+0x00000001f9d48000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+0x00000001f9b64000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib
+0x00000001f9b58000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib
+0x00000001f9b41000 	/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib
+0x00000001a1c79000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore
+0x00000001a2e21000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage
+0x00000001a2910000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork
+0x00000001a2d49000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix
+0x00000001a2b22000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector
+0x00000001a2d7a000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray
+0x00000001fbcb3000 	/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions
+0x0000000198e80000 	/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools
+0x00000001a1cf7000 	/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary
+0x00000001a3c2f000 	/usr/lib/libIOReport.dylib
+0x00000001adf2e000 	/System/Library/PrivateFrameworks/ASEProcessing.framework/Versions/A/ASEProcessing
+0x00000001a3fa4000 	/System/Library/PrivateFrameworks/FaceCore.framework/Versions/A/FaceCore
+0x00000001a3f96000 	/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer
+0x0000000203f10000 	/System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices
+0x00000001a43b7000 	/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG
+0x000000019f8e6000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib
+0x00000001a4404000 	/System/Library/PrivateFrameworks/FontServices.framework/libhvf.dylib
+0x0000000203f11000 	/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib
+0x00000001f9ee9000 	/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL
+0x00000001a3dfe000 	/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA
+0x00000001a5f99000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+0x000000019e313000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+0x00000001a4e03000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+0x00000001a6330000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+0x00000001a6328000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy
+0x00000001a5f85000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+0x00000001a4dc4000 	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATSUI.framework/Versions/A/ATSUI
+0x00000001a62bd000 	/usr/lib/libcups.2.dylib
+0x00000001a6697000 	/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos
+0x00000001a66a8000 	/System/Library/Frameworks/GSS.framework/Versions/A/GSS
+0x00000001a6009000 	/usr/lib/libresolv.9.dylib
+0x00000001a4413000 	/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal
+0x00000001ad163000 	/System/Library/Frameworks/Kerberos.framework/Versions/A/Libraries/libHeimdalProxy.dylib
+0x000000019ef61000 	/System/Library/Frameworks/Network.framework/Versions/A/Network
+0x00000001a3e65000 	/usr/lib/libheimdal-asn1.dylib
+0x00000001a66f8000 	/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth
+0x00000001a5eff000 	/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession
+0x00000001a3ef7000 	/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience
+0x00000001a5d85000 	/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib
+0x00000001a633c000 	/System/Library/PrivateFrameworks/AudioResourceArbitration.framework/Versions/A/AudioResourceArbitration
+0x00000001aa4f2000 	/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog
+0x00000001a3e6f000 	/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation
+0x00000001a923b000 	/System/Library/PrivateFrameworks/SpeechRecognitionCore.framework/Versions/A/SpeechRecognitionCore
+0x00000001648c0000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/server/libjvm.dylib
+0x000000011fa2c000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/libverify.dylib
+0x000000014cb0c000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/libjava.dylib
+0x0000000149588000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/libzip.dylib
+0x00000001497d8000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/libnio.dylib
+0x000000014cb58000 	/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/libnet.dylib
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+java_command: <unknown>
+java_class_path (initial): /Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/bin:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/scala-library-2.12.3.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/twitter-text-1.14.7.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/komoran-3.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/jhannanum-0.8.4.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/open-korean-text-2.1.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/aho-corasick.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/kkma-2.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/shineware-common-1.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/snakeyaml-1.12.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/shineware-ds-1.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/jhannanum-0.8.4.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/kkma-2.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/aho-corasick.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/shineware-common-1.0.jar:/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/lib/python3.11/site-packages/konlpy/java/shineware-ds-1.0.ja
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+PATH=/Users/rohhyun/Youtube-Sub-Maker/backend/flask/myproject/bin:/Users/rohhyun/.gem/bin:/Users/rohhyun/.nvm/versions/node/v18.9.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/bin:/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Users/rohhyun/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/rohhyun/Library/Android/sdk/emulator:/Users/rohhyun/Library/Android/sdk/tools:/Users/rohhyun/Library/Android/sdk/tools/bin:/Users/rohhyun/Library/Android/sdk/platform-tool:/Users/rohhyun/Library/Android/sdk/platform-tools:/Users/rohhyun/flutter/bin:/Users/rohhyun/.pub-cache/bin
+SHELL=/bin/zsh
+
+Signal Handlers:
+SIGSEGV: [libjvm.dylib+0x55fa28], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_ONSTACK|SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.dylib+0x55fa28], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.dylib+0x458a54], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.dylib+0x458a54], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.dylib+0x458a54], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.dylib+0x458a54], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART
+SIGUSR2: [libjvm.dylib+0x459378], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.dylib+0x457300], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.dylib+0x457300], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.dylib+0x457300], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.dylib+0x457300], sa_mask[0]=11111111011111110111111111111111, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Bsduname:Darwin 21.4.0 Darwin Kernel Version 21.4.0: Mon Feb 21 20:36:53 PST 2022; root:xnu-8020.101.4~2/RELEASE_ARM64_T8101 arm64
+rlimit: STACK 8176k, CORE 0k, NPROC 1333, NOFILE 10240, AS infinity
+load average:7.83 4.56 3.57
+
+CPU:total 8 (initial active 8) 0x61:0x0:0x1b588bb3:0, simd, crc, lse
+
+Memory: 16k page, physical 8388608k(164128k free)
+
+/proc/meminfo:
+
+
+vm_info: OpenJDK 64-Bit Server VM (25.332-b09) for bsd-aarch64 JRE (Zulu 8.62.0.19-CA-macos-aarch64) (1.8.0_332-b09), built on Apr 18 2022 08:35:54 by "zulu_re" with gcc Apple LLVM 12.0.0 (clang-1200.0.32.28)
+
+time: Wed Jul 12 11:16:35 2023
+timezone: KST
+elapsed time: 1324.489790 seconds (0d 0h 22m 4s)
+
