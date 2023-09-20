@@ -5,7 +5,7 @@ from mecab import MeCab
 
 # import numpy as np
 # import pandas as pd
-# import sys
+import sys
 
 import re
 import json
