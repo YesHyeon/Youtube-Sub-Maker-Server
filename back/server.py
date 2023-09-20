@@ -3,8 +3,10 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import SRTFormatter
 from mecab import MeCab
 
-import numpy as np
-import pandas as pd
+# import numpy as np
+# import pandas as pd
+# import sys
+
 import re
 import json
 from konlpy.tag import Okt
@@ -15,7 +17,7 @@ from tensorflow.keras import layers
 import pickle
 import keras
 
-import sys
+
 
 app = Flask(__name__)
 mecab = MeCab()
