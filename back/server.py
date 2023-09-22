@@ -31,6 +31,10 @@ prepro_configs = json.load(open(DATA_PATH+DATA_CONFIGS,'r'))
 kargs={'model_name': model_name, 'vocab_size':prepro_configs['vocab_size'],'embbeding_size':128, 'num_filters':100,'dropout_rate':0.5, 'hidden_dimension':250,'output_dimension':1}
 
 
+@app.route('/')
+def hello_pybo():
+    return 'Hello, Pybo!' 
+
 # class CNNClassifier(tf.keras.Model):
 #     def __init__(self, **kargs):
 #         super(CNNClassifier, self).__init__(name=kargs['model_name'])
