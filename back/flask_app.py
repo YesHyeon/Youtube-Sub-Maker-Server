@@ -24,7 +24,7 @@ mecab = MeCab()
 basepath = os.path.abspath(".")
 
 model_name= 'cnn_classifier_kr'
-DATA_PATH = '/model/CLEAN_DATA/'
+DATA_PATH = '/Youtube-Sub-Maker-Server/back/model/CLEAN_DATA/'
 INPUT_TRAIN_DATA = 'nsmc_train_input.npy'
 LABEL_TRAIN_DATA = 'nsmc_train_label.npy'
 DATA_CONFIGS = 'data_configs.json'
