@@ -75,8 +75,14 @@ def urls():
 @app.route('/subtitle', methods=['POST'])    
 def get_youtube_subtitle():
     url = request.json;
+    
+    proxyDict = { 
+          'http'  : "add http proxy", 
+          'https' : "add https proxy"
+        }
+    
     print('url',url);
-    transcript = YouTubeTranscriptApi.get_transcript(url['url'], languages=['de', 'ko']);
+    transcript = YouTubeTranscriptApi.get_transcript(url['url'], languages=['de', 'ko'], proxies=proxyDict);
     formatter = SRTFormatter();
     srt_formatted = formatter.format_transcript(transcript);
     
