@@ -29,7 +29,7 @@ INPUT_TRAIN_DATA = 'nsmc_train_input.npy'
 LABEL_TRAIN_DATA = 'nsmc_train_label.npy'
 DATA_CONFIGS = 'data_configs.json'
 
-prepro_configs = json.load(open(basepath + DATA_PATH+DATA_CONFIGS,'r'))
+prepro_configs = json.load(open('/home/YoutubeSubMaker/Youtube-Sub-Maker-Server/back/model/CLEAN_DATA/data_configs.json','r'))
 
 kargs={'model_name': model_name, 'vocab_size':prepro_configs['vocab_size'],'embbeding_size':128, 'num_filters':100,'dropout_rate':0.5, 'hidden_dimension':250,'output_dimension':1}
 
