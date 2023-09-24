@@ -77,8 +77,8 @@ def get_youtube_subtitle():
     url = request.json;
     
     proxyDict = { 
-          'http'  : "add http proxy", 
-          'https' : "add https proxy"
+          'http'  : "http://www.youtube.com", 
+          'https' : "https://www.youtube.com"
         }
     
     print('url',url);
