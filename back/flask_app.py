@@ -82,7 +82,7 @@ def get_youtube_subtitle():
         }
     
     print('url',url);
-    transcript = YouTubeTranscriptApi.get_transcript(url['url'], languages=['de', 'ko'], proxies=proxyDict);
+    transcript = YouTubeTranscriptApi.get_transcript(url['url'], languages=['de', 'ko']);
     formatter = SRTFormatter();
     srt_formatted = formatter.format_transcript(transcript);
     
